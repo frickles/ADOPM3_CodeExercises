@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorHandling", "ErrorHandling\ErrorHandling.csproj", "{3E5781C4-3271-4066-A1A5-0529A3BA76D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streams", "Streams\Streams.csproj", "{8FB49282-C42F-472B-8CB7-0880B2EC1000}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3E5781C4-3271-4066-A1A5-0529A3BA76D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E5781C4-3271-4066-A1A5-0529A3BA76D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E5781C4-3271-4066-A1A5-0529A3BA76D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FB49282-C42F-472B-8CB7-0880B2EC1000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FB49282-C42F-472B-8CB7-0880B2EC1000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FB49282-C42F-472B-8CB7-0880B2EC1000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FB49282-C42F-472B-8CB7-0880B2EC1000}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -22,3 +22,4 @@ namespace Logger
 //Exercises
 //1. Add a DateTime to the AppLogItem and modify ToString() accordingly
 //2. Set the DateTime in LogInformation() and LogException()
+//3. Modify AppLog to Write the Log to a stream
