@@ -67,5 +67,6 @@ namespace Streams
         //1.    Modify above code to compress using GZip and BrotliStream algorithms
         //2.    Modify the code both to use FileStreams
         //3.    Modify code to compress a randomly initialized byte array of 10M bytes
+        //4.    Add Methods to stream the content of AppLog in Logger
     }
 }
