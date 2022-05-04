@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{BDE65F1D-F3C8-4040-B3BC-93E69BA6D33D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErrorHandling", "ErrorHandling\ErrorHandling.csproj", "{3E5781C4-3271-4066-A1A5-0529A3BA76D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDE65F1D-F3C8-4040-B3BC-93E69BA6D33D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDE65F1D-F3C8-4040-B3BC-93E69BA6D33D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDE65F1D-F3C8-4040-B3BC-93E69BA6D33D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDE65F1D-F3C8-4040-B3BC-93E69BA6D33D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E5781C4-3271-4066-A1A5-0529A3BA76D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E5781C4-3271-4066-A1A5-0529A3BA76D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E5781C4-3271-4066-A1A5-0529A3BA76D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E5781C4-3271-4066-A1A5-0529A3BA76D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C80D8B45-D0DD-4D76-BCDC-1D7457A1FC8B}
+	EndGlobalSection
+EndGlobal
