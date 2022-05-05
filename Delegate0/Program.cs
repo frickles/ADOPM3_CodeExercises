@@ -6,6 +6,11 @@ var p2 = new Person("Marilyn Monroe", 30 /* Exercise 4 */);
 var p3 = new Person("John Doe", 40 /* Exercise 4 */);
 
 
+/* Exercise 3 */
+string Hello(Person p)
+{
+    return $"Hello {p.Name}";
+}
 
 //Exercise 1
 public delegate string GreetNewPerson(Person p);
@@ -24,7 +29,6 @@ public class Person
     }
 }
 
-/* Exercise 3 */
 
 
 //Design recipe
