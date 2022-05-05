@@ -9,6 +9,7 @@ namespace ADOPM3_CodeExercises
         {
             List<int> myList = new List<int>(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
 
+
             /*
             Action<int> DoOnEachElement = Write1;
             DoOnEachElement += Write2;

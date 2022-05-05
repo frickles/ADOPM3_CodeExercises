@@ -1,31 +1,55 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+var p1 = new Person("Bruce Wyane", 32, Gender.male, /* Exercise 4 */ Goodbye);
+var p2 = new Person("Marilyn Monroe", 30, Gender.female, /* Exercise 4 */ Goodbye);
+var p3 = new Person("Kim Doe", 40, Gender.unknown, /* Exercise 4 */ Goodbye);
 
-var p1 = new Person("Bruce Wyane", 32 /* Exercise 4 */);
-var p2 = new Person("Marilyn Monroe", 30 /* Exercise 4 */);
-var p3 = new Person("John Doe", 40 /* Exercise 4 */);
-
+Console.WriteLine(p1);
+Console.WriteLine(p2);
+Console.WriteLine(p3);
 
 /* Exercise 3 */
-string Hello(Person p)
+void Hello (Person p)
 {
-    return $"Hello {p.Name}";
+    if (p.PersonsGender == Gender.male)
+    {
+        Console.WriteLine($"Hello {p.Name}. You are {p.Age} years old!");
+    }
+    else if (p.PersonsGender == Gender.female)
+    {
+        Console.WriteLine($"Hello {p.Name}. You are beautiful!");
+    }
+    else
+    {
+        Console.WriteLine($"Hello {p.Name}");
+    }
 }
 
-//Exercise 1
-public delegate string GreetNewPerson(Person p);
+void Goodbye(Person p)
+{
+    Console.WriteLine($"Goodbye {p.Name}.");
+}
 
+/* Exercise 1 */
+public delegate void CreationMessage(Person p);
+
+public enum Gender { unknown, male, female}
 public class Person
 {
     public string Name { get; set; }
     public int Age { get; set; }
+    public Gender PersonsGender { get; set; }
 
-    public Person (string name, int age /* Exercise 2 */)
+    public override string ToString() => $"Name: {Name} Age: {Age} Gender: {PersonsGender}";
+    
+
+    public Person (string name, int age, Gender gndr, /* Exercise 2 */ CreationMessage message)
     {
         Name = name;
         Age = age;
+        PersonsGender = gndr;
 
         /* Exercise 5 */
+        message(this);
     }
 }
 
@@ -39,10 +63,10 @@ public class Person
 //5. Invoke the delegate object as a function using the function signature using of delegate type
 
 //Exercise:
-// Create a method that as a delegate to the Person class constructor, prints out a greeting to a newly Person 
+// Create a method that as a delegate to the Person class constructor, prints out a greeting to a newly create Person 
 //1. Done, see above
 //2. Create a delegate as a parameter in the constructor of Person in order to great the newly created person
-//3. Create the Plug-In method to greet print-out a greetign message
+//3. Create the Plug-In method to print-out a greetign message
 //4. Modify the new Person() to take the plug-in as an argument
 //5. In the constructor invoke the delegate
 
