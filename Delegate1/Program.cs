@@ -12,7 +12,7 @@ namespace ADOPM3_CodeExercises
 
             //Random Initialization
             var rnd = new Random();
-            var names = "Stockholm, Copenhagen, Oslo, Helsinki, Berlin, Madrid, Lissabon".Split(',');
+            var names = "Stockholm, Copenhagen, Oslo, Helsinki, Berlin, Madrid, Lissabon, Geneve".Split(',');
             for (int i = 0; i < numbers.Length; i++)
             {
                 numbers[i] = rnd.Next(100, 1000 + 1);
