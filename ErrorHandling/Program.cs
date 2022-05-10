@@ -10,9 +10,14 @@ namespace ErrorHandling
             {
                 ProcessUserInput();
             }
-            catch
+            catch (Exception ex)
             {
+                AppLog.Instance.LogException(ex);
                 Console.WriteLine("Pls contact our service center, you have a virus in your computer");
+            }
+            finally
+            {
+                AppLog.Instance.WriteToDisk();
             }
         }
         private static void ProcessUserInput()
@@ -40,11 +45,13 @@ namespace ErrorHandling
                         }
                         catch (InsufficientMemoryException ex)
                         {
+                            AppLog.Instance.LogException(ex);
                             Console.WriteLine($"{ex.Message} - Why cant you listen!!");
                             throw;
                         }
                         catch (Exception ex)
                         {
+                            AppLog.Instance.LogException(ex);
                             Console.WriteLine($"{ex.Message} - But it is alright my friend!");
                         }
                         finally
