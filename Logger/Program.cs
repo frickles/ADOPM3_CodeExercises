@@ -30,7 +30,8 @@ namespace Logger
             {
                 Console.WriteLine(item);
             }
-            
+
+            AppLog.Instance.WriteToDisk();          
         }
     }
 }

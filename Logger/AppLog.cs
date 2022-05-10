@@ -27,7 +27,7 @@ namespace Logger
     public sealed class AppLog
     {
         const string LoggerFile = "CodeExercise_Logger.text";
-       private static AppLog _instance = null;
+        private static AppLog _instance = null;
 
         private static Stack<AppLogItem> _logStack = null;
 
@@ -50,7 +50,7 @@ namespace Logger
             }
         }
 
-        ~AppLog()
+        public void WriteToDisk()
         {
             using (Stream s = File.Create(fname(LoggerFile)))
             using (TextWriter w = new StreamWriter(s))
