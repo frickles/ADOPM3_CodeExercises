@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 namespace Logger
 {
     public class AppLogItem
-    {
+    {        
+        public DateTime Time {get; set;}
         public string Type { get; set; }
         public string[] Info { get; set; }
         public override string ToString()
         {
-            var sReturn = $"{Type}:\n";
+            var sReturn = $"{Type} at {Time}:\n";
             foreach (var item in Info)
             {
                 sReturn += $"{item}\n";
@@ -25,7 +26,8 @@ namespace Logger
     //Example of a logger using Singleton design pattern
     public sealed class AppLog
     {
-        private static AppLog _instance = null;
+        const string LoggerFile = "CodeExercise_Logger.text";
+       private static AppLog _instance = null;
 
         private static Stack<AppLogItem> _logStack = null;
 
@@ -48,14 +50,27 @@ namespace Logger
             }
         }
 
+        ~AppLog()
+        {
+            using (Stream s = File.Create(fname(LoggerFile)))
+            using (TextWriter w = new StreamWriter(s))
+            {
+                foreach(var item in this.ToList())
+                {
+                    w.WriteLine(item);
+                }
+             }          
+        }
+
         public void LogInformation(params string[] info)
         {
-            _logStack.Push(new AppLogItem { Type = "Information", Info = info });
+            _logStack.Push(new AppLogItem { Time = DateTime.Now, Type = "Information", Info = info });
         }
 
         public void LogException(Exception ex)
         {
             var item = new AppLogItem();
+            item.Time = DateTime.Now;
             item.Type = "Exception";
             item.Info = new string[3];
             item.Info[0] = ex?.GetType().Name;
@@ -68,6 +83,14 @@ namespace Logger
         {
             return _logStack.ToList<AppLogItem>();
         }
+
+        string fname(string name)
+        {
+            var documentPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            documentPath = Path.Combine(documentPath, "ADOP", "Examples");
+            if (!Directory.Exists(documentPath)) Directory.CreateDirectory(documentPath);
+            return Path.Combine(documentPath, name);
+        } 
     }
 }
 
