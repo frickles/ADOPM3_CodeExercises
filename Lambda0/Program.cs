@@ -52,6 +52,9 @@ namespace Lambda0
             Console.WriteLine("\nLambda III Exercises");
             Console.WriteLine(Array.Find(numbers, (int item) => item > 500));
             Console.WriteLine(Array.FindLast(cities, (string item) => item.Length > 8));
+
+            var list = Array.FindAll(numbers, (int item) => item > 500);
+            Console.WriteLine(list);
             #endregion
 
         }
@@ -76,5 +79,7 @@ namespace Lambda0
 //Starting point - together
 //1.  Redo Exercises from Project Delegate1 using Lambda Expressions in all Array.ForEach(), Array.FindAll(),
 //    Array.Find(), Array.FindLast()
+//2.  Use Array.ForEach() and Lambda (with a captured variable count) to calculate the sum of all the
+//    elements in the array numbers
 
 
