@@ -10,6 +10,7 @@ namespace ADOPM3_CodeExercises
             int[] numbers = new int[20];
             string[] cities = new string[20];
 
+           
             //Random Initialization
             var rnd = new Random();
             var names = "Stockholm, Copenhagen, Oslo, Helsinki, Berlin, Madrid, Lissabon, Geneve".Split(',');
@@ -19,10 +20,41 @@ namespace ADOPM3_CodeExercises
                 cities[i] = names[rnd.Next(0, names.Length)].Trim();
             }
 
-            WriteLists(numbers, cities);
+            WriteLists<int, string>(numbers, cities);
+
+            //Delegate I exercises
+            Console.WriteLine("\nDelegate exercises");
+            Array.ForEach<int>(numbers, WriteInt);
+
+            Console.WriteLine("\nDelegate Generic exercises");
+            Array.ForEach<int>(numbers, WriteGeneric);
+            Array.ForEach<string>(cities, WriteGeneric);
+
+
+            //Delegate II Exercise
+            var evens = Array.FindAll(numbers, IsEven);
+            Array.ForEach(evens, WriteGeneric);
         }
 
-        static void WriteLists(int[] _numbers, string[] _cities)
+        static bool IsEven(int item) => item % 2 == 0;
+        
+
+
+        static void WriteInt(int item)
+        {
+            Console.WriteLine(item);
+        }
+        static void WriteString(string item)
+        {
+            Console.WriteLine(item);
+        }
+
+        static void WriteGeneric<T>(T item)
+        {
+            Console.WriteLine(item);
+        }
+
+        static void WriteLists<T1,T2>(T1[] _numbers, T2[] _cities)
         {
 
             Console.WriteLine($"{nameof(_numbers)}:");
