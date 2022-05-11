@@ -26,6 +26,10 @@ namespace Logger
     //Example of a logger using Singleton design pattern
     public sealed class AppLog
     {
+        //Broadcaster event, parameter is full filepath of written file
+        public event EventHandler<string> WrittenToFile; 
+
+
         const string LoggerFile = "CodeExercise_Logger.text";
         private static AppLog _instance = null;
 

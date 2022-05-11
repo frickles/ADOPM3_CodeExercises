@@ -40,4 +40,13 @@ namespace Logger
 //1. Add a DateTime to the AppLogItem and modify ToString() accordingly
 //2. Set the DateTime in LogInformation() and LogException()
 //3. Modify AppLog to Write the Log to a stream
-//4. Log the excpetions in Errorhandling project
+//4. Log the exceptions in Errorhandling project
+
+//Event Exercises
+//5. In Applog implement event Broadcaster
+//      - implement the method OnWrittenToDisk(string) that invokes the event WrittenToDisk
+//      - invoke OnWrittenToDisk(string) when the log has been written to disk
+//7. In Program implement event Subscriber
+//      - write a eventhandler that prints out to console what file has been written
+//      - assign the eventhandler to Applog.Instance.WrittenToDisk
+//      - execute program and see that the event is both broadcasted and subscribed

@@ -25,8 +25,11 @@ namespace Delegate1
 
             #region Exercises 4-7
             Console.WriteLine("Delegates I Exercises");
+
             Console.WriteLine($"\n{nameof(numbers)} output by delegate");
             Array.ForEach(numbers, WriteInts);
+
+
             Console.WriteLine($"\n{nameof(cities)} output by delegate");
             Array.ForEach(cities, WriteString);
 
