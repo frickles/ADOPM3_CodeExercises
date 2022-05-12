@@ -6,13 +6,14 @@ namespace Logger
     {
         static void Main(string[] args)
         {
+            AppLog.Instance.WrittenToFile += AppLogWrittenHandler;
 
             int i = 0;
             for (; i < 10; i++)
             {
                 Console.WriteLine(i);
 
-                if (i==5)
+                if (i == 5)
                 {
                     //Critical error
                     AppLog.Instance.LogInformation("Critical error");
@@ -31,7 +32,13 @@ namespace Logger
                 Console.WriteLine(item);
             }
 
-            AppLog.Instance.WriteToDisk();          
+            AppLog.Instance.WriteToDisk();
+        }
+
+
+        static void AppLogWrittenHandler(object sender, string fname)
+        {
+            Console.WriteLine($"AppLog written to {fname}");
         }
     }
 }
@@ -43,10 +50,10 @@ namespace Logger
 //4. Log the exceptions in Errorhandling project
 
 //Event Exercises
-//5. In Applog implement event Broadcaster
-//      - implement the method OnWrittenToDisk(string) that invokes the event WrittenToDisk
-//      - invoke OnWrittenToDisk(string) when the log has been written to disk
-//7. In Program implement event Subscriber
+//5. In Applog implement event Broadcaster / Publisher by:
+//      - implement the method OnWrittenToFile(string) that invokes the event WrittenToDisk
+//      - invoke OnWrittenToFile(string) when the log has been written to disk
+//7. In Program implement event Subscriber by:
 //      - write a eventhandler that prints out to console what file has been written
 //      - assign the eventhandler to Applog.Instance.WrittenToDisk
 //      - execute program and see that the event is both broadcasted and subscribed

@@ -35,6 +35,11 @@ namespace Logger
 
         private static Stack<AppLogItem> _logStack = null;
 
+        public void OnWrittenToFile(string e)
+        {
+            WrittenToFile?.Invoke(this, e);
+        }
+
         //This is key for Singleton
         private AppLog()
         {
@@ -63,7 +68,8 @@ namespace Logger
                 {
                     w.WriteLine(item);
                 }
-             }          
+             }
+            OnWrittenToFile(fname(LoggerFile));
         }
 
         public void LogInformation(params string[] info)
