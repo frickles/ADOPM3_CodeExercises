@@ -13,6 +13,11 @@ namespace Linq_Orders
             {
                 OrderList.Add(Order.Factory.CreateWithRandomData());
             }
+
+            foreach(var item in OrderList.Take(5))
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
