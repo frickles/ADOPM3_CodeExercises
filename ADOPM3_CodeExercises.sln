@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lambda0", "Lambda0\Lambda0.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lambda1", "Lambda1\Lambda1.csproj", "{378923D5-C39C-42D6-A066-DA112E5DB33A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq_Orders", "Linq_Orders\Linq_Orders.csproj", "{2745CA7B-7273-4256-A740-3821F79A0BC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{378923D5-C39C-42D6-A066-DA112E5DB33A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{378923D5-C39C-42D6-A066-DA112E5DB33A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{378923D5-C39C-42D6-A066-DA112E5DB33A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2745CA7B-7273-4256-A740-3821F79A0BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2745CA7B-7273-4256-A740-3821F79A0BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2745CA7B-7273-4256-A740-3821F79A0BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2745CA7B-7273-4256-A740-3821F79A0BC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
